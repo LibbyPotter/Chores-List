@@ -3,7 +3,7 @@
 #To-Do List
 
 #Initialize
-list = ["clean room", " do homework", " wash dishes", " do laundrey", " walk dog"]
+list = ["clean room", "do homework", "wash dishes", "do laundrey", "walk dog"]
 
 #Functions
 def add():
@@ -26,24 +26,37 @@ def remove():
     position = int(input("Where would you like to remove from your list? "))
     list.pop(position)
     ToDo()
+def removeAll():
+     list.clear()
+     ToDo()
+def sort():
+     list.sort()
+     ToDo()
+def viewNum():
+     print(len(list))
+     ToDo()
 def exit():
     print("Shutting down, have a good day.")
 def ToDo():
     print("Welcome to your daily To-Do list!")
-    choice = int(input("Please Choose what you want to do. \n 1. Add to list \n 2. View list \n 3. Mark task as completed \n 4. Remove from list \n 5. Exit \n"))
+    choice = int(input("Please Choose what you want to do. \n 1. Add to list \n 2. View list \n 3. Mark task as completed \n 4. Remove from list \n 5. Remove all items \n 6. Sort alphabetically \n 7. View number of items \n 8. Exit \n"))
     if choice==1:
         add()
     if choice==2:
-          view()
-          
+          view()    
     if choice==3:
           complete()
     if choice==4:
           remove()
     if choice==5:
+          removeAll()
+    if choice==6:
+          sort()
+    if choice==7:
+          viewNum()
+    if choice==8:
           exit()
    
-
 
 #Main
 ToDo()
